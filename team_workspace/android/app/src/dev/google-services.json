@@ -1,0 +1,226 @@
+{
+  "project_info": {
+    "project_number": "444356892534",
+    "project_id": "telemedicine-gtihc",
+    "storage_bucket": "telemedicine-gtihc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:07900555f95072e4afcc57",
+        "android_client_info": {
+          "package_name": "com.gti.lifecare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:a2a8b92cf2f65417afcc57",
+        "android_client_info": {
+          "package_name": "com.gti.lifecare.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:d27663f99ab548ffafcc57",
+        "android_client_info": {
+          "package_name": "com.gti.lifecare.sit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:934a3b3bdc28004aafcc57",
+        "android_client_info": {
+          "package_name": "com.gti.lifecare.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:78fec3705dbf2a6aafcc57",
+        "android_client_info": {
+          "package_name": "com.gti.procare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:9998b64b9b1a2f5eafcc57",
+        "android_client_info": {
+          "package_name": "com.gti.procare.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:89e55215682f0d01afcc57",
+        "android_client_info": {
+          "package_name": "com.gti.procare.sit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:31765808820b3295afcc57",
+        "android_client_info": {
+          "package_name": "com.gti.procare.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444356892534-7j1ep8f4083p0ol70rhkjnk8v0sf96ah.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gti.procare.sit"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

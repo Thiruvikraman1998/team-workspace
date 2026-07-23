@@ -13,6 +13,9 @@ void setupNetworkModule({required String baseUrl}) {
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json",
+          "apikey": "sb_publishable_OuhwBSUfDptPK21W0Idk7Q_d2n5ffCG",
+          "Authorization":
+              " Bearer sb_publishable_OuhwBSUfDptPK21W0Idk7Q_d2n5ffCG",
         },
       ),
     );

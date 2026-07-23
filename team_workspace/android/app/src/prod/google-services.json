@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "444356892534",
+    "project_id": "telemedicine-gtihc",
+    "storage_bucket": "telemedicine-gtihc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444356892534:android:78fec3705dbf2a6aafcc57",
+        "android_client_info": {
+          "package_name": "com.gti.procare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfuLsvhZSwdCD87cc88AG4WVk0bm5h99Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

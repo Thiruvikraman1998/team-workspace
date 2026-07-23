@@ -8,7 +8,10 @@ class TeamWorkSpace extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Team Work Space",
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF4F6FA),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+      ),
       home: const LoginScreen(),
     );
   }

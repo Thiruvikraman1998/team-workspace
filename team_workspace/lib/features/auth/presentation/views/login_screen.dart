@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:team_workspace/features/tasks/presentation/views/task_list.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -6,7 +7,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F6FA),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -16,7 +16,6 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const SizedBox(height: 48),
 
-                // --- Logo ---
                 Container(
                   width: 72,
                   height: 72,
@@ -32,7 +31,6 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                // --- Title ---
                 const Text(
                   'Welcome Back',
                   style: TextStyle(
@@ -44,14 +42,10 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 6),
                 const Text(
                   'Log in to manage your productivity',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF7E8299),
-                  ),
+                  style: TextStyle(fontSize: 14, color: Color(0xFF7E8299)),
                 ),
                 const SizedBox(height: 36),
 
-                // --- Card ---
                 Container(
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
@@ -68,7 +62,6 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // --- Email field ---
                       const Text(
                         'Email address',
                         style: TextStyle(
@@ -115,7 +108,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
 
-                      // --- Password label row ---
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -142,7 +134,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
 
-                      // --- Password field ---
                       TextField(
                         obscureText: true,
                         decoration: InputDecoration(
@@ -189,12 +180,18 @@ class LoginScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 24),
 
-                      // --- Login button ---
                       SizedBox(
                         width: double.infinity,
                         height: 52,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => TaskListScreen(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF1565D8),
                             foregroundColor: Colors.white,
@@ -211,72 +208,17 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 24),
-
-                      // --- OR divider ---
-                      const Row(
-                        children: [
-                          Expanded(child: Divider(color: Color(0xFFE1E3EA))),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16),
-                            child: Text(
-                              'OR',
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: Color(0xFF7E8299),
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                          Expanded(child: Divider(color: Color(0xFFE1E3EA))),
-                        ],
-                      ),
-                      const SizedBox(height: 24),
-
-                      // --- Google sign-in button ---
-                      SizedBox(
-                        width: double.infinity,
-                        height: 52,
-                        child: OutlinedButton.icon(
-                          onPressed: () {},
-                          icon: const Text(
-                            'G',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xFF4285F4),
-                            ),
-                          ),
-                          label: const Text(
-                            'Continue with Google',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xFF1E1E2D),
-                            ),
-                          ),
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(color: Color(0xFFE1E3EA)),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(14),
-                            ),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),
                 const SizedBox(height: 28),
 
-                // --- Sign up link ---
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
                       "Don't have an account? ",
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color(0xFF7E8299),
-                      ),
+                      style: TextStyle(fontSize: 14, color: Color(0xFF7E8299)),
                     ),
                     GestureDetector(
                       onTap: () {},
