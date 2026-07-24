@@ -1,6 +1,6 @@
 import 'package:team_workspace/core/mappers/result_mapper.dart';
 
-/// Base contract for a use case that takes [Params] and returns a [Result].
+/// Base contract for a use case that takes Params and returns a Result.
 abstract class UseCase<Type, Params> {
   Future<Result<Type>> call(Params params);
 }

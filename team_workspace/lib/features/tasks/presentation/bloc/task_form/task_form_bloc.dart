@@ -6,7 +6,7 @@ import 'package:team_workspace/features/tasks/domain/usecases/update_task_usecas
 import 'package:team_workspace/features/tasks/presentation/bloc/task_form/task_form_event.dart';
 import 'package:team_workspace/features/tasks/presentation/bloc/task_form/task_form_state.dart';
 
-/// Handles both Create and Edit flows. Pass [existingTask] to edit; leave it
+/// Handles both Create and Edit flows. Pass existingTask to edit; leave it
 /// null to create a brand new task.
 class TaskFormBloc extends Bloc<TaskFormEvent, TaskFormState> {
   final CreateTaskUsecase _createTaskUsecase;

@@ -61,7 +61,9 @@ class _TaskDetailView extends StatelessWidget {
                       MaterialPageRoute(builder: (_) => TaskFormScreen(existingTask: task)),
                     );
                     if (updated != null) {
-                      context.read<TaskDetailBloc>().add(TaskDetailEvent.loaded(updated));
+                      if (context.mounted) {
+                        context.read<TaskDetailBloc>().add(TaskDetailEvent.loaded(updated));
+                      }
                     }
                   },
                 ),

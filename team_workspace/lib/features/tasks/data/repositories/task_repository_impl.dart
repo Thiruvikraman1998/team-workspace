@@ -111,7 +111,7 @@ class TaskRepositoryImpl implements TaskRepository {
       await _localDatasource.upsertTask(created, isSynced: true);
       return SuccessResult(data: created.toEntity());
     } on DioException catch (e) {
-      // queue for retry instead of failing outright
+      // queue for retry instead of failing
       await _localDatasource.upsertTask(model, isSynced: false);
       await _localDatasource.enqueuePendingAction(PendingActionType.create, model);
       return FailureResult(

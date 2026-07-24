@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:team_workspace/core/database/app_database.dart';
 import 'package:team_workspace/core/di/global_di_instance.dart';
 import 'package:team_workspace/core/network/network_info.dart';
-import 'package:team_workspace/core/network/setup_network_module.dart';
 import 'package:team_workspace/features/auth/data/datasources/auth_remote_datasource.dart';
 import 'package:team_workspace/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:team_workspace/features/auth/domain/repositories/auth_repository.dart';
@@ -27,8 +26,8 @@ import 'package:team_workspace/features/tasks/presentation/bloc/task_detail/task
 import 'package:team_workspace/features/tasks/presentation/bloc/task_form/task_form_bloc.dart';
 import 'package:team_workspace/features/tasks/presentation/bloc/task_list/task_list_bloc.dart';
 
-/// Registers every dependency used across the app. Called once from `main`
-/// after [setupNetworkModule] and Firebase have been initialized.
+/// Registers every dependency used across the app. Called once from main
+/// after setupNetworkModule and Firebase have been initialized.
 Future<void> setupInjection() async {
   // --- Core -----------------------------------------------------------
   getIt.registerLazySingleton<AppDatabase>(() => AppDatabase.instance);
@@ -36,7 +35,7 @@ Future<void> setupInjection() async {
   getIt.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(getIt()));
   getIt.registerLazySingleton<FirebaseAuth>(() => FirebaseAuth.instance);
 
-  // --- Auth feature -----------------------------------------------------
+  // --- Auth feature 
   getIt.registerLazySingleton<AuthRemoteDatasource>(
     () => AuthRemoteDatasourceImpl(getIt()),
   );
@@ -56,7 +55,7 @@ Future<void> setupInjection() async {
     ),
   );
 
-  // --- Tasks feature ------------------------------------------------------
+  // --- Tasks feature 
   getIt.registerLazySingleton<TaskRemoteDatasource>(
     () => TaskRemoteDatasourceImpl(getIt()),
   );

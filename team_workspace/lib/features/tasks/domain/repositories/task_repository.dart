@@ -29,8 +29,8 @@ abstract class TaskRepository {
   /// sqflite cache automatically when there is no connectivity.
   Future<Result<PaginatedTasks>> getTasks(TaskQueryParams params);
 
-  /// Returns the last cached page (used for the very first paint / offline
-  /// cold start) without hitting the network.
+  /// Returns the last cached page (used for the very first start / offline
+  /// start) without hitting the network.
   Future<List<TasksEntity>> getCachedTasks();
 
   Future<Result<TasksEntity>> getTaskById(String taskId);

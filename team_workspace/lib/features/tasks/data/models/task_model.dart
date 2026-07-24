@@ -62,7 +62,7 @@ sealed class TaskModel with _$TaskModel {
     );
   }
 
-  /// --- sqflite (de)serialization -------------------------------------
+  /// --- sqflite (de)serialization 
   Map<String, dynamic> toDbMap({bool isSynced = true}) => {
     'id': taskId ?? id?.toString() ?? UniqueKeyFallback.next(),
     'remote_id': id,
