@@ -8,20 +8,22 @@ import 'package:team_workspace/core/network/api_client.dart';
 /// Reference: this mirrors the original network layer shared for the
 /// assessment, extended with an auth interceptor that attaches the current
 /// Firebase user's ID token (when available) to every request.
-void setupNetworkModule({required String baseUrl}) {
+void setupNetworkModule() {
+  const supabaseUrl = String.fromEnvironment('SUPABASE_URL');
+
+  const supabaseAnonKey = String.fromEnvironment('SUPABASE_ANON_KEY');
   getIt.registerLazySingleton<Dio>(() {
     final dio = Dio(
       BaseOptions(
-        baseUrl: baseUrl,
+        baseUrl: supabaseUrl,
         connectTimeout: const Duration(seconds: 30),
         sendTimeout: const Duration(seconds: 30),
         receiveTimeout: const Duration(seconds: 30),
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'apikey': 'sb_publishable_OuhwBSUfDptPK21W0Idk7Q_d2n5ffCG',
-          'Authorization':
-              'Bearer sb_publishable_OuhwBSUfDptPK21W0Idk7Q_d2n5ffCG',
+          'apikey': supabaseAnonKey,
+          'Authorization': 'Bearer $supabaseAnonKey',
         },
       ),
     );
@@ -33,8 +35,7 @@ void setupNetworkModule({required String baseUrl}) {
             final user = FirebaseAuth.instance.currentUser;
             if (user != null) {
               // final token = await user.getIdToken();
-              options.headers['Authorization'] =
-                  'Bearer sb_publishable_OuhwBSUfDptPK21W0Idk7Q_d2n5ffCG';
+              options.headers['Authorization'] = 'Bearer $supabaseAnonKey';
             }
           } catch (_) {
             // if token retrieval fails we still let the request go through,

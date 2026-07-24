@@ -7,14 +7,12 @@ import 'package:team_workspace/core/network/setup_network_module.dart';
 import 'package:team_workspace/features/tasks/data/sync/task_sync_service.dart';
 import 'package:team_workspace/firebase_options.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  setupNetworkModule(
-    baseUrl: 'https://yqjyztrzxhscxvauerfw.supabase.co/rest/v1/',
-  );
+  setupNetworkModule();
 
   await setupInjection();
 

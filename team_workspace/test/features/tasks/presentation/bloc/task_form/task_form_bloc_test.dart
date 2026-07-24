@@ -27,6 +27,8 @@ void main() {
   });
 
   const tTask = TasksEntity(id: 1, title: 'New Task');
+  final tDueDate = DateTime(2024, 1, 1);
+  const tAssignedUser = 'user-123';
 
   setUpAll(() {
     registerFallbackValue(const TasksEntity());
@@ -39,11 +41,13 @@ void main() {
         when(() => mockCreateTaskUsecase(any())).thenAnswer((_) async => const SuccessResult(data: tTask));
         return taskFormBloc;
       },
-      act: (bloc) => bloc.add(const TaskFormEvent.submitted(
+      act: (bloc) => bloc.add(TaskFormEvent.submitted(
         title: 'New Task',
         description: 'Desc',
         priority: TaskPriority.low,
         status: TaskStatus.pending,
+        dueDate: tDueDate,
+        assignedUser: tAssignedUser,
       )),
       expect: () => [
         const TaskFormState.submitting(),
@@ -57,11 +61,13 @@ void main() {
         when(() => mockCreateTaskUsecase(any())).thenAnswer((_) async => const FailureResult(errorMessage: 'Error'));
         return taskFormBloc;
       },
-      act: (bloc) => bloc.add(const TaskFormEvent.submitted(
+      act: (bloc) => bloc.add(TaskFormEvent.submitted(
         title: 'New Task',
         description: 'Desc',
         priority: TaskPriority.low,
         status: TaskStatus.pending,
+        dueDate: tDueDate,
+        assignedUser: tAssignedUser,
       )),
       expect: () => [
         const TaskFormState.submitting(),
@@ -87,11 +93,13 @@ void main() {
         when(() => mockUpdateTaskUsecase(any())).thenAnswer((_) async => const SuccessResult(data: tTask));
         return taskFormBloc;
       },
-      act: (bloc) => bloc.add(const TaskFormEvent.submitted(
+      act: (bloc) => bloc.add(TaskFormEvent.submitted(
         title: 'Updated Title',
         description: 'Desc',
         priority: TaskPriority.medium,
         status: TaskStatus.inProgress,
+        dueDate: tDueDate,
+        assignedUser: tAssignedUser,
       )),
       expect: () => [
         const TaskFormState.submitting(),
