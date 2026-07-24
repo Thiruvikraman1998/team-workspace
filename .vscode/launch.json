@@ -10,7 +10,12 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/app/env/main_dev.dart",
-            "args": ["--flavor", "dev"]
+            "args": [
+                "--flavor",
+                "dev",
+                "--dart-define=SUPABASE_URL=https://yqjyztrzxhscxvauerfw.supabase.co/rest/v1/",
+                "--dart-define=SUPABASE_ANON_KEY=sb_publishable_OuhwBSUfDptPK21W0Idk7Q_d2n5ffCG"
+            ],
         },
         {
             "name": "team_workspace-prod",
@@ -18,7 +23,10 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/app/env/main_prod.dart",
-            "args": ["--flavor", "prod"]
+            "args": [
+                "--flavor",
+                "prod"
+            ]
         },
     ]
 }
