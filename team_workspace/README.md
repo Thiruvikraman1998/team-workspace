@@ -78,9 +78,11 @@ Add this to your `.vscode/launch.json` to run the app with different environment
             "type": "dart",
             "program": "lib/app/env/main_dev.dart",
             "args": [
-                "--dart-define", "APP_ENV=dev",
-                "--dart-define", "API_BASE_URL=https://api.dev.teamworkspace.com"
-            ]
+        "--flavor",
+        "dev",
+        "--dart-define=SUPABASE_URL=https://your-project.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=your_anon_key"
+    ]
         },
         {
             "name": "Team Workspace (Prod)",
@@ -88,9 +90,11 @@ Add this to your `.vscode/launch.json` to run the app with different environment
             "type": "dart",
             "program": "lib/app/env/main_prod.dart",
             "args": [
-                "--dart-define", "APP_ENV=prod",
-                "--dart-define", "API_BASE_URL=https://api.teamworkspace.com"
-            ]
+        "--flavor",
+        "dev",
+        "--dart-define=SUPABASE_URL=https://your-project.supabase.co",
+        "--dart-define=SUPABASE_ANON_KEY=your_anon_key"
+    ]
         }
     ]
 }
