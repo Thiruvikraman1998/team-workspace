@@ -27,4 +27,12 @@ class DioErrorMappers {
         return "Something went wrong";
     }
   }
+
+  static String fromException(DioException e) {
+    final data = e.response?.data;
+    if (data is Map && data['message'] != null) {
+      return data['message'].toString();
+    }
+    return map(e.type);
+  }
 }
